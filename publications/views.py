@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Publication
+
+def allpub(request):
+    pubs = Publication.objects
+    return render(request, 'blog/allpub.html', {'pubs':pubs})
+
