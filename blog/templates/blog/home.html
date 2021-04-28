@@ -18,22 +18,20 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-        {% for new in blog.all %}
+        {% for blog in blogs.all %}
         <div class="col-md-4">
           <div class="card shadow-sm h-100 bg-dark">
-            <a href="{% url 'blogdetail' %}" class="text-decoration-none">
+            <a href="{% url 'blogdetail' blog.id %}" class="text-decoration-none">
             <div class="card-body text-white">
                 <div class="d-flex justify-content-between">
-                <p class="card-text fw-bolder text-start">{{ new.title }}</p>
-                <p class="card-text fw-lighter fst-italic text-end">{{ new.edit_date_format }}</p> 
+                <p class="card-text fw-bolder text-start">{{ blog.title }}</p>
+                <p class="card-text fw-lighter fst-italic text-end">{{ blog.edit_date_format }}</p> 
                 </div>
-                <img class="card-img-top" width="500" height="200" src="{{new.image.url}}" />
+                <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
                 <br />
                 <br />
-                <p class="card-text fst-normal text-justify">{{ new.body }}</p>
+                <p class="card-text fst-normal">{{ blog.summary }}...</p>
             </div>
             </a>
           </div>
