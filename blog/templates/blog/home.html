@@ -3,18 +3,22 @@
 {% block content %}
 
 <main>
-
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="font-weight-bolder">Welcome to Srishti's Blog</h1>
-        <p class="lead text-muted">Hey, my name is Srishti Agrawal and I love to write poetry.</p>
-        <p>
+  {% load staticfiles %}
+  <section class="py-4 text-center container">
+    <div class="row py-lg-2">
+      <div class="mx-auto ">
+        <h1 class="font-weight-bolder">Welcome to Srishti's World</h1>
+        <br />
+        <!-- <p class="lead text-muted">♥️ "The diary of a placid girl" ♥️</p> -->
+        <img src="{% static 'silentdrafter.png' %}" class="center" width=800 height=450/>
+        <!-- <p>
           <a href="mailto:srishtiagrwl0502@gmail.com" class="btn btn-primary my-2">Email Me</a>
-        </p>
+        </p> -->
       </div>
     </div>
   </section>
+
+  
 
   <div class="album py-5 bg-light">
     <div class="container">
@@ -25,9 +29,7 @@
             <a href="{% url 'blogdetail' blog.id %}" class="text-decoration-none">
             <div class="card-body text-white">
                 <div class="d-flex justify-content-between">
-                <p class="card-text fw-bolder text-start">{{ blog.title }}</p>
-                <p class="card-text fw-lighter fst-italic text-end">{{ blog.edit_date_format }}</p> 
-                </div>
+                <p class="card-text fw-bolder text-start">{{ blog.title }}</p></div>
                 <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
                 <br />
                 <br />
@@ -37,7 +39,6 @@
           </div>
         </div>
         {% endfor %}
-
       </div>
     </div>
   </div>
