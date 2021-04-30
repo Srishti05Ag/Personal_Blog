@@ -7,42 +7,127 @@
   <section class="py-4 text-center container">
     <div class="row py-lg-2">
       <div class="mx-auto ">
-        <h1 class="font-weight-bolder">Welcome to Srishti's World</h1>
+        <h1 style="font-size:50px;"><b><i>Welcome to Srishti's World</i></b></h1>
         <br />
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'silentdrafter.png' %}" class="d-block w-100" set style="height: 600px;" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'Srishtipic.png' %}" class="d-block w-100" set style="height: 600px;" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'Thankyou.png' %}" class="d-block w-100" set style="height: 600px;" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
         <!-- <p class="lead text-muted">♥️ "The diary of a placid girl" ♥️</p> -->
-        <img src="{% static 'silentdrafter.png' %}" class="center" width=800 height=450/>
+        <!-- <img src="{% static 'silentdrafter.png' %}" class="center" width=800 height=450/>
+        <img src="{% static 'Srishtipic.png' %}" class="center" width=800 height=450/>
+        <img src="{% static 'Thankyou.png' %}" class="center" width=800 height=450/> -->
         <!-- <p>
           <a href="mailto:srishtiagrwl0502@gmail.com" class="btn btn-primary my-2">Email Me</a>
         </p> -->
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="album py-5 bg-light">
+        <div class="container">
+          <hr />
+          <h1 class="text-center"><b>Poems</b></h1>
+          <hr />
+          <h6 class="text-muted text-center">Are you an avid Poem lover?</h6>
+          <p class="text-muted text-center"><i>▼ Check out my poems ▼</i></p>
+          <br />
+          <br />
+          <div class="d-flex justify-content-center">
+            <div class="col"><img src="{% static 'english.png' %}" set style="height: 280px; padding: 10px"/></div>
+            <div class="col"><img src="{% static 'hindi.png' %}" set style="height: 280px; padding: 10px"/></div>
+          </div>
+        </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-4" set style="padding-left: 75px;"><img src="{% static 'blogimg.png' %}" set style="height: 360px;"/></div>
+            <div class="col-8">
+              <h1 class="text-center"><b>Blogs</b></h1>
+              <br />
+              <br />
+              <div class="col-11">
+                <p>Hey</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="album py-5 bg-light">
+        <div class="container d-flex justify-content-center">
+            <div class="col-4">
+              <h1>Publications</h1>
+            </div>
+            <div class="col-8">
+              <p>hey</p>
+            </div>          
+        </div>
+        </div>
+
+
+
+
+
       </div>
     </div>
   </section>
 
-  
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for blog in blogs.all %}
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100 bg-dark">
-            <a href="{% url 'blogdetail' blog.id %}" class="text-decoration-none">
-            <div class="card-body text-white">
-                <div class="d-flex justify-content-between">
-                <p class="card-text fw-bolder text-start">{{ blog.title }}</p></div>
-                <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
-                <br />
-                <br />
-                <p class="card-text fst-normal">{{ blog.summary }}...</p>
-            </div>
-            </a>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
 </main>
 
 {% endblock %}
+
+
+<!-- <div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for blog in blogs.all %}
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 bg-dark">
+          <a href="{% url 'blogdetail' blog.id %}" class="text-decoration-none">
+          <div class="card-body text-white">
+              <div class="d-flex justify-content-between">
+              <p class="card-text fw-bolder text-start">{{ blog.title }}</p></div>
+              <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
+              <br />
+              <br />
+              <p class="card-text fst-normal">{{ blog.summary }}...</p>
+          </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div> -->
