@@ -19,8 +19,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 import blog.views
 import hindiblog.views
+import writings.views
 from blog import views
 from hindiblog import views
+from writings import views
 
 
 urlpatterns = [
@@ -28,5 +30,6 @@ urlpatterns = [
     path('', blog.views.home, name='home'),
     path('blog/', include('blog.urls')),
     path('hindiblog/',include('hindiblog.urls')),
+    path('writings/',include('writings.urls')),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
