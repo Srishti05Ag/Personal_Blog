@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+    {% load staticfiles %}
+
+    <div class="container">
+        <div class="row py-lg-4 mx-auto">
+            
+            <div class="col-4">
+                <h1 class="text"><b><i>English Poems</i></b></h1>
+                <br /><br /><br />
+
+                <ol class="list-group list-group-flush col-md-8" set style="border: none;"><b>
+                <li class="list-group-item" set style="border: none;">Mother</li>
+                <li class="list-group-item" set style="border: none;">Dapibus ac facilisis in</li>
+                <li class="list-group-item" set style="border: none;">Morbi leo risus</li>
+                <li class="list-group-item" set style="border: none;">Porta ac consectetur ac</li>
+                <li class="list-group-item" set style="border: none;">Vestibulum at eros</li></b>
+                </ol>
+
+            </div>
+            <div class="col-8">
+                <br /><br /><br /><br /><br />
+                {% for blog in blogs.all %}
+                <div class="card" set style="padding: 10px; width:300px;">
+                    <div class="card shadow-sm h-100 bg-dark">
+                        <a href="{% url 'blogdetail' blog.id %}" class="text-decoration-none">
+                        <div class="card-body text-white">
+                            <div class="d-flex justify-content-between">
+                            <p class="card-text fw-bolder text-start">{{ blog.title }}</p></div>
+                            <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
+                            <br />
+                            <br />
+                            <img class="card-img-top" width="500" height="200" src="{{blog.poem.url}}" />
+                        </div>
+                        </a>
+                    </div> 
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+</main>
+
+{% endblock %}

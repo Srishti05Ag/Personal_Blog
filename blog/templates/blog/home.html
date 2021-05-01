@@ -4,6 +4,7 @@
 
 <main>
   {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'mypersonalblog/style.css' %}">
   <section class="py-4 text-center container">
     <div class="row py-lg-2">
       <div class="mx-auto ">
@@ -59,39 +60,120 @@
           <br />
           <br />
           <div class="d-flex justify-content-center">
-            <div class="col"><img src="{% static 'english.png' %}" set style="height: 280px; padding: 10px"/></div>
-            <div class="col"><img src="{% static 'hindi.png' %}" set style="height: 280px; padding: 10px"/></div>
+            <div class="col">
+              <a href="{% url 'englishpoem' %}">
+              <img src="{% static 'english.png' %}" class="img-fluid" alt="Responsive image" set style="height: 280px; padding: 10px"/>
+              </a>
+            </div>
+            <div class="col">
+              <a href="{% url 'hindipoem' %}">
+              <img src="{% static 'hindi.png' %}" class="img-fluid" alt="Responsive image" set style="height: 280px; padding: 10px"/>
+              </a>
+            </div>
           </div>
         </div>
         </div>
         <br />
         <br />
         <br />
-        <div class="album py-5 bg-light">
         <div class="container">
-          <div class="row">
-            <div class="col-4" set style="padding-left: 75px;"><img src="{% static 'blogimg.png' %}" set style="height: 360px;"/></div>
-            <div class="col-8">
-              <h1 class="text-center"><b>Blogs</b></h1>
+          <div class="row  d-flex justify-content-between">
+            <div class="col-6">
+              <img src="{% static 'blogimg.png' %}" class="img-fluid" alt="Responsive image" set style="height: 360px;"/>
+            </div>
+            <div class="col-6">
+              <h1 class="text col-6"><b>Blogs</b></h1>
               <br />
               <br />
               <div class="col-11">
-                <p>Hey</p>
+                <p class="col-5">Hey</p>
               </div>
             </div>
           </div>
         </div>
-        </div>
+        
         <br />
         <br />
         <br />
         <div class="album py-5 bg-light">
-        <div class="container d-flex justify-content-center">
-            <div class="col-4">
-              <h1>Publications</h1>
+        <div class="container row d-flex justify-content-between">
+            <div class="col-6">
+              <h1 class="col-8">Publications</h1>
             </div>
-            <div class="col-8">
-              <p>hey</p>
+            <div class="col-6">
+              <div class="row">
+                <div class="col-sm-6" set style="padding: 10px;">
+                  <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-dark">
+                        <div class="card-body">
+                            <i class="fa fa-search fa-5x float-right"></i>
+                            <h3 class="card-title">Front</h3>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card-back bg-white">
+                        <div class="card-body">
+                            <h3 class="card-title">Back</h3>
+                            <p class="card-text">Suprise this one has more more more more content on the back!</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-6" set style="padding: 10px;">
+                  <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-dark">
+                        <div class="card-body">
+                            <i class="fa fa-search fa-5x float-right"></i>
+                            <h3 class="card-title">Front</h3>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card-back bg-white">
+                        <div class="card-body">
+                            <h3 class="card-title">Back</h3>
+                            <p class="card-text">Suprise this one has more more more more content on the back!</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-6" set style="padding: 10px;">
+                  <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-dark">
+                        <div class="card-body">
+                            <i class="fa fa-search fa-5x float-right"></i>
+                            <h3 class="card-title">Front</h3>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card-back bg-white">
+                        <div class="card-body">
+                            <h3 class="card-title">Back</h3>
+                            <p class="card-text">Suprise this one has more more more more content on the back!</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-6" set style="padding: 10px;">
+                  <div class="card card-flip h-100">
+                    <div class="card-front text-white bg-dark">
+                        <div class="card-body">
+                            <i class="fa fa-search fa-5x float-right"></i>
+                            <h3 class="card-title">Front</h3>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card-back bg-white">
+                        <div class="card-body">
+                            <h3 class="card-title">Back</h3>
+                            <p class="card-text">Suprise this one has more more more more content on the back!</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+
+
+              <!-- <img src="{% static 'blogimg.png' %}" class="img-fluid" alt="Responsive image" set style="height: 360px;"/> -->
             </div>          
         </div>
         </div>
