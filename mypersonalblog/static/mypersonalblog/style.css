@@ -89,3 +89,23 @@ input[type=submit]:hover {
 .message-margin{
   margin-left: -160px;
 }
+
+/*
+bg image
+*/
+.bg-image{
+  grid-row: 1/-4;
+  grid-column: 4;
+}
+.overlay-image{
+  grid-row: 1/span 8;
+  grid-column: 1;
+  padding-top: 20%;
+  z-index: 1;
+}
+.image-stack{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+
