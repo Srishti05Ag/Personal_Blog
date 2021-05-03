@@ -7,19 +7,32 @@
 
     <div class="container">
         <div class="row py-lg-4 mx-auto">
-            
             <div class="col-4">
-                <h1 class="text"><b><i>हिंदी कविताएँ</i></b></h1>
-                <br /><br /><br />
-
-                <ol class="list-group list-group-flush col-md-8" set style="border: none;"><b>
-                <li class="list-group-item" set style="border: none;">Mother</li>
-                <li class="list-group-item" set style="border: none;">Dapibus ac facilisis in</li>
-                <li class="list-group-item" set style="border: none;">Morbi leo risus</li>
-                <li class="list-group-item" set style="border: none;">Porta ac consectetur ac</li>
-                <li class="list-group-item" set style="border: none;">Vestibulum at eros</li></b>
-                </ol>
-
+                <div class="d-flex flex-column p-4 bg-light" style="width: 380px;">
+                    <a href="{% url 'hindipoem' %}"
+                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                        <svg class="bi me-0" width="40" height="32"></svg>
+                        <span class="fs-1"><b><i>हिंदी कविताएँ</i></b></span>
+                    </a>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
+                            Mother
+                        </li>
+                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
+                            Mother
+                        </li>
+                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
+                            Mother
+                        </li>
+                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
+                            Mother
+                        </li>
+                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
+                            Mother
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="col-8">
                 <br /><br /><br /><br /><br />
@@ -27,22 +40,23 @@
                 <div class="card" set style="padding: 10px; width:300px;">
                     <div class="card shadow-sm h-100 bg-dark">
                         <a href="{% url 'hindiblogdetail' blog.id %}" class="text-decoration-none">
-                        <div class="card-body text-white">
-                            <div class="d-flex justify-content-between">
-                            <p class="card-text fw-bolder text-start">{{ blog.title }}</p></div>
-                            <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
-                            <br />
-                            <br />
-                            <p class="card-text fst-normal">{{ blog.summary }}...</p>
-                        </div>
+                            <div class="card-body text-white">
+                                <div class="d-flex justify-content-between">
+                                    <p class="card-text fw-bolder text-start">{{ blog.title }}</p>
+                                </div>
+                                <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
+                                <br />
+                                <br />
+                                <p class="card-text fst-normal">{{ blog.poem_text|truncatechars:35 }}...</p>
+                            </div>
                         </a>
-                    </div> 
+                    </div>
                 </div>
                 {% endfor %}
             </div>
-            
         </div>
     </div>
+    
 </main>
 
 {% endblock %}

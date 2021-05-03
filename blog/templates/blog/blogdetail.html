@@ -6,9 +6,9 @@
 <div class="container">
     <h1 class="text-start pt-3">{{ detaildict.title }}</h1>
     <img class="img-fluid" src="{{ detaildict.image.url }}" height=500 width=500 />
+    <p>{{ detaildict.poem_text|linebreaks }}</p>
     <br />
     <br />
-    <img class="img-fluid" src="{{ detaildict.poem.url }}" height=500 width=500 />
 </div>
 </main>
 
