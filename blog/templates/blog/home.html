@@ -55,7 +55,7 @@
         <br />
         <br />
         <br />
-        <div class="album py-5 bg-light">
+        <div class="album py-4 bg-light">
           <div class="container">
             <hr />
             <h1 class="text-center"><b>Poems</b></h1>
@@ -89,15 +89,15 @@
               <img src="{% static 'blogimg.png' %}" class="img-fluid rounded shadow-sm" alt="Responsive image" set
                 style="height: 360px;" />
             </div>
-            <div class="col-6">
+            <div class="col-6" style="padding: 10px;">
               <h1 class="text col-6"><b>Blogs</b></h1>
-              <br />
-              <br />
-              <div class="col-11">
-                <p class="col-5">Hey
-                  <a href="{% url 'writings' %}">Read More...</a>
-                </p>
-              </div>
+              <br /><br />
+              <p>
+                  Hello Reader !!! There are times when I feel extremely excited, I sit down 
+                  and jot down my happiness. At times, I feel low, I feel my writings my closest friend. 
+                  Writing is my passion. To read my blogs, 
+                  <a href="{% url 'writings' %}">click here</a>.
+              </p>
             </div>
           </div>
         </div>
@@ -106,77 +106,95 @@
         <br />
         <hr/>
           <div class="container row d-flex justify-content-between">
-            <div class="col-6">
-              <h1 class="col-8">Publications</h1>
+            <div class="col-6" style="padding: 10px;">
+              <h1 class="col-6"><b>Publications</b></h1>
+              <br/><br/>
+              <p>To publish is to make content available to the general public. It's a feeling of accomplishment and a thirst 
+                for more when your writings are getting published. I got published in some of the top publishers of the
+                country, especially for the upcoming budding writers. </p><p>
+                No writer gets satisfaction from his/her writings
+                unless people appreciate his/her work. It's always about the readers who praise and support a writer and 
+                make his/her writings reach to the wider public. </p>
             </div>
             <div class="col-6">
               <div class="row">
                 <div class="col-sm-6" set style="padding: 10px;">
                   <div class="card card-flip h-100">
-                    <div class="card-front text-white bg-dark">
+                    <div class="card-front bg-dark">
                       <div class="card-body">
-                        <i class="fa fa-search fa-5x float-right"></i>
-                        <h3 class="card-title">Front</h3>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <img src="{% static 'auctoresapr20.png' %}" set style="height: 250px; width: 250px;" 
+                        class="img-fluid rounded shadow-sm" alt="Responsive image"/>
                       </div>
                     </div>
-                    <div class="card-back bg-white">
+                    <div class="card-back bg-light">
                       <div class="card-body">
-                        <h3 class="card-title">Back</h3>
-                        <p class="card-text">Suprise this one has more more more more content on the back!</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6" set style="padding: 10px;">
-                  <div class="card card-flip h-100">
-                    <div class="card-front text-white bg-dark">
-                      <div class="card-body">
-                        <i class="fa fa-search fa-5x float-right"></i>
-                        <h3 class="card-title">Front</h3>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                    </div>
-                    <div class="card-back bg-white">
-                      <div class="card-body">
-                        <h3 class="card-title">Back</h3>
-                        <p class="card-text">Suprise this one has more more more more content on the back!</p>
+                        <h3 class="card-title"><b><i>the_auctores</i></b></h3><br/>
+                        <p class="card-text" set style="font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                          the_auctores is a collection of some selected poems in English and Hindi, some verses and sonnets.
+                          It's a work of a group of people who came together and made this e-book possible.</p>
+                        <p class="card-text" set style="font-size: 14px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                          <b>Got published in the April-2020 e-book by the_auctores.</b></p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-6" set style="padding: 10px;">
                   <div class="card card-flip h-100">
-                    <div class="card-front text-white bg-dark">
+                    <div class="card-front bg-dark">
                       <div class="card-body">
-                        <i class="fa fa-search fa-5x float-right"></i>
-                        <h3 class="card-title">Front</h3>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <img src="{% static 'storymirrorjun20.png' %}" set style="height: 250px; width: 250px;" 
+                        class="img-fluid rounded shadow-sm" alt="Responsive image"/>
                       </div>
                     </div>
-                    <div class="card-back bg-white">
+                    <div class="card-back bg-light">
                       <div class="card-body">
-                        <h3 class="card-title">Back</h3>
-                        <p class="card-text">Suprise this one has more more more more content on the back!</p>
+                        <h3 class="card-title"><b><i>StoryMirror</i></b></h3><br/>
+                        <p class="card-text" set style="font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                          StoryMirror is the creative library - A platform that offers an opportunity to use one's 
+                          creative thoughts and ideas to influence millions in multiple languages.
+                        </p>
+                        <p class="card-text" set style="font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                          <b>Got published in the Top-23 Hindi Poem Writers in Yes, I Write-2 competition organized
+                            by StoryMirror at the National Cooporate Level.</b>
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-sm-6" set style="padding: 10px;">
                   <div class="card card-flip h-100">
-                    <div class="card-front text-white bg-dark">
+                    <div class="card-front bg-dark">
                       <div class="card-body">
-                        <i class="fa fa-search fa-5x float-right"></i>
-                        <h3 class="card-title">Front</h3>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <img src="{% static 'arambhsept20.png' %}" set style="height: 250px; width: 250px;" 
+                        class="img-fluid rounded shadow-sm" alt="Responsive image"/>
                       </div>
                     </div>
-                    <div class="card-back bg-white">
+                    <div class="card-back bg-light">
+                      <div class="card-body">
+                        <h3 class="card-title"><b><i>Arambh</i></b></h3><br/>
+                        <p class="card-text" set style="font-size: 12px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                          Arambh was the National Writing Exhibition organised by the_2am.thoughts, an organisation
+                        registered under the Ministry of MSME.</p>
+                        <p class="card-text" set style="font-size: 14px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                          <b>Got published in the September e-book by the_2am.thoughts.</b></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6" set style="padding: 10px;">
+                  <div class="card h-100">
+                    <div class="card-front bg-dark">
+                      <div class="card-body">
+                        <img src="{% static 'Upcoming.png' %}" set style="height: 250px; width: 250px;" 
+                        class="img-fluid rounded shadow-sm" alt="Responsive image"/>
+                      </div>
+                    </div>
+                    <!-- <div class="card-back bg-light">
                       <div class="card-body">
                         <h3 class="card-title">Back</h3>
                         <p class="card-text">Suprise this one has more more more more content on the back!</p>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
