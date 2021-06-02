@@ -149,7 +149,8 @@
           <!--Grid column-->
           <div class="col-6">
 
-          <form>
+          <!-- <form action="" method="POST">
+            {% csrf_token %}
             <label for="fname" class="text-margin">First Name</label>
             <br/>
             <input type="text" id="fname" name="firstname" placeholder="First name">
@@ -168,7 +169,33 @@
             <br/>
             <input type="submit" value="Submit">
             <br/><br/>
-          </form>
+          </form> -->
+
+
+          <div class="container">
+            <form action="" method="POST" class="contact-form">
+              {% csrf_token %}
+              <div class="form-control">
+                <div class="tag">First Name</div>
+                <input type="text" id="fname" name="firstname" placeholder="First name">
+              </div>
+              <div class="form-control">
+                <div class="tag">Last Name</div>
+                <input type="text" id="lname" name="lastname" placeholder="Last name">
+              </div>
+              <div class="form-control">
+                <div class="tag">Email</div>
+                <input type="text" id="email" name="email" placeholder="Email Address">
+              </div>
+              <div class="form-control">
+                <div class="tag">Type your message here</div>
+                <textarea id="message" name="message" rows="4"></textarea>
+              </div>
+              <div class="form-control">
+                <input type="Submit" class="btn submit-btn" value="Submit">
+              </div>
+            </form>
+          </div>
 
           </div>
       <!--Grid column-->
