@@ -7,7 +7,7 @@
 
     <div class="container">
         <div class="row py-lg-4 mx-auto">
-            <div class="col-4">
+            <div class="col-md-4 d-none d-md-block">
                 <div class="d-flex flex-column p-4 bg-light" style="width: 380px;">
                     <a href="{% url 'hindipoem' %}"
                         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
@@ -15,44 +15,40 @@
                         <span class="fs-1"><b><i>हिंदी कविताएँ</i></b></span>
                     </a>
                     <hr>
+                    {% for blog in hindiblogs.all %}
                     <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
-                            Mother
-                        </li>
-                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
-                            Mother
-                        </li>
-                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
-                            Mother
-                        </li>
-                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
-                            Mother
-                        </li>
-                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 10px; padding-left: 50px;">
-                            Mother
+                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 20px; padding-left: 50px;">
+                            <a href="{% url 'hindiblogdetail' blog.id %}" class="text-decoration-none" set
+                                style="color: black;">
+                                ◈ {{ blog.title }}
+                            </a>
                         </li>
                     </ul>
+                    {% endfor %}
                 </div>
             </div>
-            <div class="col-8">
-                <br /><br /><br /><br /><br />
-                {% for blog in hindiblogs.all %}
-                <div class="card" set style="padding: 10px; width:300px;">
-                    <div class="card shadow-sm h-100 bg-dark">
-                        <a href="{% url 'hindiblogdetail' blog.id %}" class="text-decoration-none">
-                            <div class="card-body text-white">
-                                <div class="d-flex justify-content-between">
-                                    <p class="card-text fw-bolder text-start">{{ blog.title }}</p>
-                                </div>
-                                <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
-                                <br />
-                                <br />
-                                <p class="card-text fst-normal">{{ blog.poem_text|truncatechars:35 }}...</p>
+            <div class="col-md-8">
+                <div class="row">
+                    {% for blog in hindiblogs.all %}
+                    <div class='col-md-6'>
+                        <div class="card" set style="padding: 10px; margin-bottom: 20px;">
+                            <div class="card shadow-sm h-100 bg-dark">
+                                <a href="{% url 'hindiblogdetail' blog.id %}" class="text-decoration-none">
+                                    <div class="card-body text-white">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="card-text fw-bolder text-start">{{ blog.title }}</p>
+                                        </div>
+                                        <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
+                                        <br />
+                                        <br />
+                                        <p class="card-text fst-normal">{{ blog.poem_text|truncatechars:30 }}</p>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
     </div>

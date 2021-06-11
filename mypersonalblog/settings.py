@@ -143,3 +143,5 @@ EMAIL_HOST_PASSWORD= 'igwpcqfdmdplkwnr'
 EMAIL_USE_TLS= True
 EMAIL_PORT= 587
 EMAIL_USE_SSL=False
+# APPLICATION_EMAIL = 'Admin<sweetsrishtiagrawal09@gmail.com>'
+# DEFAULT_FROM_EMAIL = 'Admin<sweetsrishtiagrawal09@gmail.com>'
