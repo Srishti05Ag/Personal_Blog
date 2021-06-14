@@ -41,7 +41,7 @@
                                         </div>
                                         <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
                                         <br /><br />
-                                        <p class="card-text fst-normal">{{ blog.summary }}...</p>
+                                        <p class="card-text fst-normal">{{ blog.writing_text|truncatechars:30 }}</p>
                                     </div>
                                 </a>
                             </div>

@@ -3,13 +3,19 @@
 {% block content %}
 
 <main>
-<div class="container">
-    <h1 class="text-start pt-3">{{ contentdict.title }}</h1>
-    <img class="img-fluid" src="{{ contentdict.image.url }}" height=500 width=500 />
-    <br />
-    <br />
-    <img class="img-fluid" src="{{ contentdict.content.url }}" height=500 width=500 />
-</div>
+    <div class="container user-select-none">
+        <div class="row">
+            <div class="col-md-7">
+                <h1 class="text-start pt-3">{{ contentdict.title }}</h1><br/>
+                <img class="img-fluid" src="{{ contentdict.image.url }}" height=500 width=500 />
+            </div>
+            <div class="col-md-5" set style="margin-top: 60px;">
+                <p>{{ contentdict.writing_text|linebreaks }}</p>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
 </main>
 
 {% endblock %}
