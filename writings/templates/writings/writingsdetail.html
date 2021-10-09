@@ -4,18 +4,30 @@
 
 <main>
     <div class="container user-select-none">
-        <div class="row">
+        <div class="card shadow-sm" style="background-color:snow;">
+        <div class="row" style="margin: 20px 0px 20px 20px">
             <div class="col-md-7">
-                <h1 class="text-start pt-3">{{ contentdict.title }}</h1><br/>
-                <img class="img-fluid" src="{{ contentdict.image.url }}" height=500 width=500 />
+                <h1 class="text-start pt-3" style="font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold;">
+                    {{ contentdict.title }}</h1><br/>
+                <img class="img-fluid rounded shadow-sm" src="{{ contentdict.image.url }}" style="height:500px; width: 500px;"/>
             </div>
-            <div class="col-md-5" set style="margin-top: 60px;">
-                <p>{{ contentdict.writing_text|linebreaks }}</p>
+            <div class="col-md-4 ws" style="margin-top: 20px;">
+                <a href="javascript:{document.getElementById('liked').submit()}" class="d-flex justify-content-end" style="margin-right: 20px;">
+                    <button class="btn btn-primary">
+                    👍🏻 Like {{ contentdict.likes_total }}</button></a>
+                    <br/>
+                <p><i>{{ contentdict.writing_text|linebreaks }}</i></p>
             </div>
-            <br />
-            <br />
+        </div>
         </div>
     </div>
 </main>
+<br /><br />
+
+<form id="liked" method="POST" action="{% url 'liked' contentdict.id %}">
+    {% csrf_token %}
+    <input type="hidden">
+</form>
 
 {% endblock %}
+

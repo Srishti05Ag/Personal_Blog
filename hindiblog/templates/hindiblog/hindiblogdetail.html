@@ -4,17 +4,28 @@
 
 <main>
     <div class="container user-select-none">
-        <div class="row">
+        <div class="card shadow-sm" style="background-color:snow;">
+        <div class="row" style="margin: 20px 0px 20px 20px">
             <div class="col-md-7">
-                <h1 class="text-start pt-3">{{ hindidict.title }}</h1><br/>
-                <img class="img-fluid" src="{{ hindidict.image.url }}" height=500 width=500 />
+                <h1 class="text-start pt-3" style="font-family:Georgia, 'Times New Roman', Times, serif; font-weight: bold;">
+                    {{ hindidict.title }}</h1><br/>
+                <img class="img-fluid rounded shadow-sm" src="{{ hindidict.image.url }}" style="height:500px; width: 500px;" />
             </div>
-            <div class="col-md-5" set style="margin-top: 60px;">
-                <p>{{ hindidict.poem_text|linebreaks }}</p>
+            <div class="col-md-5 ws" style="margin-top: 20px;">
+                <a href="javascript:{document.getElementById('vote').submit()}" class="d-flex justify-content-end" style="margin-right: 20px;">
+                    <button class="btn btn-primary">
+                    👍🏻 Like {{ hindidict.vote }}</button></a>
+                    <br/>
+                <p><i>{{ hindidict.poem_text|linebreaks }}</i></p>
             </div>
-        </div>
-    </div>
+        </div></div>
+    </div>    
 </main>
 <br/><br/>
+
+<form id="vote" method="POST" action="{% url 'vote_func' hindidict.id %}">
+    {% csrf_token %}
+    <input type="hidden">
+</form>
 
 {% endblock %}

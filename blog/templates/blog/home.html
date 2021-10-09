@@ -10,7 +10,6 @@
       <div class="mx-auto ">
         <h1 style="font-size:50px;"><b><i>Welcome to Srishti's World</i></b></h1>
         <br />
-
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -42,7 +41,6 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-
         <br /><br /><br /><br />
         <div class="album py-4 bg-light">
           <div class="container">
@@ -57,7 +55,7 @@
               <div class="col-md">
                 <a href="{% url 'englishpoem' %}">
                   <img src="{% static 'english.png' %}" class="img-fluid rounded shadow-sm" alt="Responsive image" set
-                    style="height: 280px; padding: 10px" />
+                    style="height: 280px; padding: 10px;" />
                 </a>
               </div>
               <div class="col-md">
@@ -79,9 +77,9 @@
                 style="height: 360px;" />
             </div>
             <div class="col-md-6" style="padding: 10px;">
-              <h1 class="text col-md-6"><b>Blogs</b></h1>
+              <h1 class="text col-md-6" style="text-align: left; font-family:cursive"><b>Blogs</b></h1>
               <br /><br />
-              <p>
+              <p align="left" style="font-family:cursive">
                 Hello Reader !!! There are times when I feel extremely excited, I sit down
                 and jot down my happiness. At times, I feel low, I feel my writings my closest friend.
                 Writing is my passion. To read my blogs,
@@ -89,20 +87,17 @@
               </p>
             </div>
           </div>
-        </div>
-        <br />
-        <br />
-        <br />
+        </div><br /><br /><br />
         <hr />
         <div class="container row d-flex justify-content-between">
           <div class="col-md-6" style="padding: 10px;">
-            <h1 class="col-md-6"><b>Publications</b></h1>
+            <h1 class="col-md-6" style="text-align: left; font-family:'Times New Roman', Times, serif"><b>Publications</b></h1>
             <br /><br />
-            <p>To publish is to make content available to the general public. It's a feeling of accomplishment and a
+            <p align="left" style="font-family: 'Times New Roman', Times, serif; font-size: 18px; font-weight: 500;">To publish is to make content available to the general public. It's a feeling of accomplishment and a
               thirst
               for more when your writings are getting published. I got published in some of the top publishers of the
               country, especially for the upcoming budding writers. </p>
-            <p>
+            <p align="left" style="font-family: 'Times New Roman', Times, serif; font-size: 18px; font-weight: 500;">
               No writer gets satisfaction from his/her writings
               unless people appreciate his/her work. It's always about the readers who praise and support a writer and
               make his/her writings reach to the wider public. </p>
@@ -200,38 +195,28 @@
             </div>
           </div>
         </div>
-        <hr />
-        <br />
-        <br />
-        <br />
-        <div class="container row d-flex justify-content-between image-stack">
-          <!-- <div class="col-md-4">
-            <img src="{% static 'rewards.png' %}" class="img-fluid" alt="Responsive image" set style="height: 100px;" />
+        <hr /><br /><br /><br />
+        <div class="container">
+          <div class=" row d-flex justify-content-center image-stack">
+          <div class="col-md">
+            <img src="{% static 'rewards.png' %}" class ="img-top img-fluid rounded shadow-sm" 
+            set style="height: 400px; width: 1000px; padding: 10px;" alt="Responsive image"/>
+          
+            <img src="{% static 'ITM_poem.png' %}" class ="img-bottom img-fluid rounded shadow-sm" 
+            set style="height: 180px; padding: 7px; background-color: black;" alt="Responsive image"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+            <img src="{% static 'Story_Mirror.png' %}" class ="img-bottom1 img-fluid rounded shadow-sm" 
+            set style="height: 180px; padding: 7px; background-color: black;" alt="Responsive image"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+            <img src="{% static 'Writing_Skills_Contest.png' %}" class ="img-bottom2 img-fluid rounded shadow-sm" 
+            set style="height: 180px; padding: 7px; background-color: black;" alt="Responsive image"/>
+          
+            <!-- <img src="{% static 'rewards.png' %}" class ="img-bottom3 img-fluid rounded shadow-sm" 
+            set style="height: 160px; padding: 5px;" alt="Responsive image"/>
+           -->
           </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-sm-6" set style="padding: 10px;">
-
-              </div>
-
-            </div>
-          </div> -->
-
-          <div id="award_item bg-image">
-            <img src="{% static 'rewards.png' %}" set style="height: 300px;" />
           </div>
-
-
-
         </div>
-
-
-
-
-
-
-
-
       </div>
     </div>
   </section>
@@ -240,26 +225,3 @@
 
 {% endblock %}
 
-
-<!-- <div class="album py-5 bg-light">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      {% for blog in blogs.all %}
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100 bg-dark">
-          <a href="{% url 'blogdetail' blog.id %}" class="text-decoration-none">
-          <div class="card-body text-white">
-              <div class="d-flex justify-content-between">
-              <p class="card-text fw-bolder text-start">{{ blog.title }}</p></div>
-              <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
-              <br />
-              <br />
-              <p class="card-text fst-normal">{{ blog.summary }}...</p>
-          </div>
-          </a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div> -->

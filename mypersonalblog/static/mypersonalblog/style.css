@@ -91,21 +91,70 @@ input[type=submit]:hover {
 }
 
 /*
-bg image
+bg image and R&R
 */
-.bg-image{
-  grid-row: 1/-4;
-  grid-column: 4;
-}
-.overlay-image{
-  grid-row: 1/span 8;
-  grid-column: 1;
-  padding-top: 20%;
-  z-index: 1;
-}
 .image-stack{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
 }
+.img-top{
+  position:relative;
+  z-index:1;
+}
+.img-bottom{
+  position:relative;
+  top: -80px;
+  left: -15px;
+  z-index:2;
+  transition: transform .2s;
+}
+.img-bottom1{
+  position:relative;
+  top: -80px;
+  left: -5px;
+  z-index:2;
+  transition: transform .2s;
+}
+.img-bottom2{
+  position:relative;
+  top: -80px;
+  left: 5px;
+  z-index:2;
+  transition: transform .2s;
+}
+/* .img-bottom3{
+  position:relative;
+  top: -80px;
+  left: 15px;
+  z-index:2;
+  transition: transform .2s;
+} */
 
+/* hover */
+.img-bottom:hover{
+  transform: scale(3);
+  z-index: 3;
+}
+.img-bottom1:hover{
+  transform: scale(3);
+  z-index: 3;
+}
+.img-bottom2:hover{
+  transform: scale(3);
+  z-index: 3;
+}
+/* .img-bottom3:hover{
+  transform: scale(2);
+  z-index: 3;
+} */
+
+
+/*
+poem/blog-font
+*/
+.ws{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  word-spacing: 2px;
+  line-height: 28px;
+}

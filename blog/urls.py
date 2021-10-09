@@ -3,7 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('englishpoem/<int:blog_id>/', views.blogdetail, name='blogdetail'),
     path('englishpoem/',views.englishpoem, name='englishpoem'),
+    path('<int:poem_id>/', views.blogdetail, name='blogdetail'),
+    path('<int:poem_id>/like_func', views.like_func, name='like_func'),
 ]  
-

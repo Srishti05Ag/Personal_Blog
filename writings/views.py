@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Writings
 
@@ -9,5 +9,13 @@ def writings(request):
 def writingsdetail(request, blog_id):
     details = get_object_or_404(Writings, pk=blog_id)
     return render(request, 'writings/writingsdetail.html', {'contentdict':details})
+
+def liked(request, blog_id):
+    if request.method == "POST":
+        like = get_object_or_404(Writings, pk=blog_id)
+        like.likes_total +=1
+        like.save()
+        # return render(request, 'writings/writingsdetail.html',{'contentdict':like})
+        return redirect('/writings/' + str(like.id))
 
 

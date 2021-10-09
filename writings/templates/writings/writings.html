@@ -7,51 +7,31 @@
 
     <div class="container">
         <div class="row py-lg-4 mx-auto">
-            <!-- <div class="col-4">
-                <div class="d-flex flex-column p-4 bg-light" style="width: 380px;">
-                    <a href="{% url 'writings' %}"
-                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                        <svg class="bi me-0" width="40" height="32"></svg>
-                        <span class="fs-1"><b><i>हिंदी कविताएँ</i></b></span>
-                    </a>
-                    <hr>
-                    {% for blog in content.all %}
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li class="nav-item fs-5 fw-bold" set style="padding-bottom: 20px; padding-left: 50px;">
-                            <a href="{% url 'writingsdetail' blog.id %}" class="text-decoration-none" set
-                                style="color: black;">
-                                ◈ {{ blog.title }}
-                            </a>
-                        </li>
-                    </ul>
-                    {% endfor %}
-                </div>
-            </div> -->
-
-            <div class="col-md-8">
+            <div class="col-md">
                 <div class="row">
                     {% for blog in content.all %}
-                    <div class='col-md-6'>
+                    <div class='col-md-4'>
                         <div class="card" set style="padding: 10px; margin-bottom: 20px;">
                             <div class="card shadow-sm h-100 bg-dark">
                                 <a href="{% url 'writingsdetail' blog.id %}" class="text-decoration-none">
                                     <div class="card-body text-white">
                                         <div class="d-flex justify-content-between">
-                                            <p class="card-text fw-bolder text-start">{{ blog.title }}</p>
-                                        </div>
-                                        <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
-                                        <br /><br />
-                                        <p class="card-text fst-normal">{{ blog.writing_text|truncatechars:30 }}</p>
+                                            <p class="card-text fw-bolder text-start" style="font-family:Georgia, 'Times New Roman', Times, serif">
+                                                {{ blog.title|truncatechars:30 }}</p>
+                                        </div><br/>
+                                        <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" /><br/><br/>
+                                        <p class="card-text fst-normal" style="font-family:Georgia, 'Times New Roman', Times, serif;">
+                                            <i>{{ blog.writing_text|truncatechars:30 }}</i></p>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     {% endfor %}
-                </div>
+                </div> 
             </div>
         </div>
     </div>
 </main>
-
+<br /><br />
 {% endblock %}

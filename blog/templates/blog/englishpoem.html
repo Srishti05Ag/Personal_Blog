@@ -34,12 +34,13 @@
                                 <a href="{% url 'blogdetail' blog.id %}" class="text-decoration-none">
                                     <div class="card-body text-white">
                                         <div class="d-flex justify-content-between">
-                                            <p class="card-text fw-bolder text-start">{{ blog.title }}</p>
-                                        </div>
+                                            <p class="card-text fw-bolder text-start" style="font-family:Georgia, 'Times New Roman', Times, serif">
+                                                {{ blog.title|truncatechars:30 }}</p>
+                                        </div><br />
                                         <img class="card-img-top" width="500" height="200" src="{{blog.image.url}}" />
-                                        <br />
-                                        <br />
-                                        <p class="card-text fst-normal">{{ blog.poem_text|truncatechars:30 }}</p>
+                                        <br /><br />
+                                        <p class="card-text fst-normal"  style="font-family:Georgia, 'Times New Roman', Times, serif;">
+                                            <i>{{ blog.poem_text|truncatechars:30 }}</i></p>
                                     </div>
                                 </a>
                             </div>
@@ -51,4 +52,5 @@
         </div>
     </div>
 </main>
+<br /><br />
 {% endblock %}
