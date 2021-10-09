@@ -37,59 +37,6 @@ img-rotate
   transform: rotate(180deg);
 }  
 
-
- /*
-form
-*/
-
-input[type=text], select {
-  width: 50%;
-  height: 8%;
-  padding: 12px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-textarea, select {
-  width: 50%;
-  padding: 12px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: none;
-}
-
-input[type=submit] {
-  width: 20%;
-  background-color: gray;
-  color: white;
-  padding: 14px 6px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color:darkgray;
-}
-
-.text-margin{
-  margin-left: -250px;
-}
-
-.email-margin{
-  margin-left: -290px;
-}
-
-.message-margin{
-  margin-left: -160px;
-}
-
 /*
 bg image and R&R
 */
@@ -105,50 +52,35 @@ bg image and R&R
 .img-bottom{
   position:relative;
   top: -80px;
-  left: -15px;
   z-index:2;
   transition: transform .2s;
 }
 .img-bottom1{
   position:relative;
   top: -80px;
-  left: -5px;
   z-index:2;
   transition: transform .2s;
 }
 .img-bottom2{
   position:relative;
   top: -80px;
-  left: 5px;
   z-index:2;
   transition: transform .2s;
 }
-/* .img-bottom3{
-  position:relative;
-  top: -80px;
-  left: 15px;
-  z-index:2;
-  transition: transform .2s;
-} */
 
 /* hover */
 .img-bottom:hover{
-  transform: scale(3);
+  transform: scale(2);
   z-index: 3;
 }
 .img-bottom1:hover{
-  transform: scale(3);
+  transform: scale(2);
   z-index: 3;
 }
 .img-bottom2:hover{
-  transform: scale(3);
-  z-index: 3;
-}
-/* .img-bottom3:hover{
   transform: scale(2);
   z-index: 3;
-} */
-
+}
 
 /*
 poem/blog-font
@@ -158,3 +90,4 @@ poem/blog-font
   word-spacing: 2px;
   line-height: 28px;
 }
+
